@@ -16,7 +16,7 @@ const GlobaListyle = ({ children }) => {
 
           html {
                  min-width:360px;
-                 scroll-bahavior:smooth;
+                 scroll-behavior:smooth;
                  font-family: 'Baloo 2', cursive !important;
 
            }
@@ -34,7 +34,7 @@ const GlobaListyle = ({ children }) => {
 };
 
 
-{/*Inicializado a app */ }
+{/*Initialized a app */ }
 function MyApp({ Component, pageProps }) {
   return <ThemeProvider theme={customTheme}> {/**tema do aplicativo */}
     <AuthProvider>

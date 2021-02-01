@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { useAuth } from "@lib/auth";
-import { Box, Button, Code, Flex, Heading, Text } from "@chakra-ui/react"
+import { Button, Code, Flex, Heading, Text } from "@chakra-ui/react"
 import { ChatIcon } from '@chakra-ui/icons'
+import EmptyStateItem from '@components/EmptyStateItem';
 
 
 const Home = () => {
@@ -12,8 +13,6 @@ const Home = () => {
       <title>RapidBack</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
-
 
     <ChatIcon w={40} h={40} color="blue.500" />
 
@@ -28,11 +27,14 @@ const Home = () => {
 
     {/* deslogar da sessao */}
     {auth.user ? (
-      <Button mt={4} onClick={(e) => auth.signout()}>Sign Out</Button>
-    ) : (
+
+         <EmptyStateItem/>   
+    
+      ) : (
+         // <Button mt={4} onClick={(e) => auth.signout()}>Sign Out</Button>
         <Button mt={4} colorScheme="blue"  variant="outline" size="sm" onClick={(e) => auth.signWithGithub()}>SignIn With Github</Button>
       )}
-    {/* logar na sessao */}
+  
 
   </Flex>
 };
