@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Link, Stack, Avatar, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Heading } from '@chakra-ui/react'
+import {Button, Flex, Link, Stack, Avatar, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Heading } from '@chakra-ui/react'
 import { ChatIcon } from '@chakra-ui/icons'
 import { useAuth } from "@lib/auth";
 
@@ -16,13 +16,14 @@ const DashboardItem = ({ children }) => {
             backgroundColor="white"
             p={4}
             py={4}
-            px={8}
+            px={20}
         >
             <Stack isInline spacing={4} align="center">
 
-                <ChatIcon w={6} h={6} />
+                <ChatIcon w={7} h={7} />
                 <Link>Feedback</Link>
                 <Link>Websites</Link>
+                <Link>About</Link>
             </Stack>
             <Flex alignItems="center">
                 <Link mr={4}>Account</Link>
@@ -44,9 +45,10 @@ const DashboardItem = ({ children }) => {
             >
                 <Breadcrumb>
                     <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink color="black" fontFamily="">Websites</BreadcrumbLink>
+                        <BreadcrumbLink color="gray.700" fontFamily="" fontSize="small">Websites</BreadcrumbLink>
                     </BreadcrumbItem>
                     <Heading color="black" fontFamily="">Websites</Heading>
+                 
                     {children}
                 </Breadcrumb>
             </Flex>
