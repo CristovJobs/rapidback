@@ -26,7 +26,7 @@ const DashboardItem = ({ children }) => {
                 <Link>About</Link>
             </Stack>
             <Flex alignItems="center">
-                <Link mr={4}>Account</Link>
+                <Link mr={4}>Log out</Link>
                 <Avatar size="sm" src={auth.user.photoUrl} />
             </Flex>
         </Flex>
@@ -45,13 +45,15 @@ const DashboardItem = ({ children }) => {
             >
                 <Breadcrumb>
                     <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink color="gray.700" fontFamily="" fontSize="small">Websites</BreadcrumbLink>
+                            <BreadcrumbLink color="gray.700" fontFamily="" fontSize="small">Websites</BreadcrumbLink>
                     </BreadcrumbItem>
                     <Heading color="black" fontFamily="">Websites</Heading>
                  
                     {children}
+
                 </Breadcrumb>
             </Flex>
+         
         </Flex>
     </Flex>
 
